@@ -1,40 +1,154 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Product Listing Page
 
-## Getting Started
+A responsive Product Listing application built with **Next.js**, **React.js**, and **Bootstrap**. The application fetches product data using **Server-Side Rendering (SSR)** from the Fake Store API and provides client-side search functionality.
 
-First, run the development server:
+---
+
+## 🚀 Tech Stack
+
+- Next.js
+- React.js
+- Bootstrap 5
+- JavaScript (ES6+)
+- Fetch API
+
+---
+
+## ✨ Features
+
+- Server-Side Rendering (SSR) using `getServerSideProps`
+- Fetches product data from Fake Store API
+- Responsive product grid using Bootstrap
+- Product cards displaying:
+  - Product Image
+  - Product Title
+  - Price
+  - Category
+  - Rating
+- Client-side search by product title
+- Loading spinner during search
+- Dynamic Product Details page (`/product/[id]`)
+- Responsive design for desktop, tablet, and mobile
+
+---
+
+## 📂 Project Structure
+
+```
+bribooks-assignment/
+│
+├── components/
+│   ├── Loader.js
+│   ├── ProductCard.js
+│   └── SearchBar.js
+│
+├── pages/
+│   ├── _app.js
+│   ├── index.js
+│   └── product/
+│       └── [id].js
+│
+├── styles/
+├── public/
+├── package.json
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/AkashTirkey/Product-Listing-Page.git
+```
+
+Go to the project directory
+
+```bash
+cd Product-Listing-Page
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+---
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+## 🛠 Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📌 API Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+Fake Store API
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+https://fakestoreapi.com/products
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📖 Assumptions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+- Product data is fetched from the Fake Store API.
+- Search filtering is performed on the client side.
+- Product details are fetched dynamically using the product ID.
+- Bootstrap is used for responsive layout and styling.
+
+---
+
+## 🌐 Live Demo
+
+Vercel Deployment
+
+```
+https://product-listing-page-seven-phi.vercel.app/
+```
+
+---
+
+## ⚠️ Deployment Note
+
+This project uses the API specified in the assignment:
+
+```
+https://fakestoreapi.com/products
+```
+
+The application works correctly during local development.
+
+While deploying to Vercel, the Fake Store API currently returns an **HTTP 403 Cloudflare challenge page** instead of JSON for server-side requests made from Vercel's infrastructure. As a result, Server-Side Rendering requests may not display product data in the deployed version, even though the implementation follows the assignment requirements and functions correctly in local development.
+
+This behavior originates from the external API's server-side access restrictions rather than the application implementation.
+
+---
+
+## 👨‍💻 Author
+
+**Akash Tirkey**
+
+GitHub:
+https://github.com/AkashTirkey
+
+---
