@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import ProductCard from "./components/ProductCard";
-import SearchBar from "./components/SearchBar";
-import Loader from "./components/Loader";
+import ProductCard from "../components/ProductCard";
+import SearchBar from "../components/SearchBar";
+import Loader from "../components/Loader";
 
 export default function Home({ products }) {
   const [searchTerm, setSearchTerm] = useState("");
