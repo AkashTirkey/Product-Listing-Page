@@ -31,6 +31,8 @@ export default function Home({ products }) {
 
       {loading ? (
         <Loader />
+      ) : filteredProducts.length === 0 ? (
+        <h3 className="text-center mt-5">No products found.</h3>
       ) : (
         <div className="row">
           {filteredProducts.map((product) => (
